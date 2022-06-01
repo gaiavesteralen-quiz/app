@@ -239,7 +239,7 @@ const Core = function ({
               className="answerBtn btn btn-lg"
               style={styles.fadeInRight}
             >
-              {questionType === 'text' && <span style={styles.fadeInRight}>{answer}</span>}
+              {questionType === 'text' && <span style={styles.fadeIn}>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
             </StyleRoot>
