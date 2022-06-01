@@ -318,3 +318,25 @@ code {
   align-self: flex-end;
   grid-row: 3;
 }
+
+@media only screen and (min-width: 450px) {
+  .react-quiz {
+    width: 445px;
+  }
+
+  .react-quiz-container .result-answer-wrapper {
+    width: 445px;
+  }
+
+  .form {
+    width: 445px;
+  }
+
+  #comments {
+    width: 445px;
+  }
+
+  .btn {
+    width: 400px
+  }
+}

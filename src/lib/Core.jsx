@@ -277,8 +277,7 @@ const Core = function ({
       </div>
       <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>
       {renderQuizResultQuestions()}
-      <NameForm></NameForm>
-      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>      
+      <NameForm></NameForm>    
       </Fade>
     </div>
   );
