@@ -1,18 +1,31 @@
 import React, {
   useState, useEffect, useCallback, Fragment,
 } from 'react';
-import QuizResultFilter from './core-components/QuizResultFilter';
 import { checkAnswer, rawMarkup } from './core-components/helpers';
 import InstantFeedback from './core-components/InstantFeedback';
 import Explanation from './core-components/Explanation';
-import { quiz } from '../quiz';
-import random from './randomId';
 import {writeUserData} from './firebase.js'
-import { Zoom } from 'react-reveal';
-import { Slide } from 'react-reveal';
-import Jump from 'react-reveal/Jump';
 import { Fade } from 'react-reveal';
 import config from 'react-reveal/globals';
+import Radium, {StyleRoot} from 'radium';
+import { fadeInLeft, slideInRight, slideInDown, fadeIn } from 'react-animations'
+import { Footer } from '../footer';
+import { NameForm } from '../test';
+
+const styles = {
+  slideInRight : {
+    animation: 'x 0.5s',
+    animationName: Radium.keyframes(slideInRight)
+  },
+  slideInDown : {
+    animation : 'x 0.2s',
+    animationName : Radium.keyframes(slideInDown)
+  },
+  fadeIn : {
+    animation : '0.5s',
+    animationName: Radium.keyframes(fadeIn)
+  }
+}
 
 config({ ssrFadeout: true });
 
@@ -104,10 +117,7 @@ const Core = function ({
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
-  };
-
-  const handleChange = (event) => {
-    setFilteredValue(event.target.value);
+    console.log()
   };
 
   const renderAnswerInResult = (question, userInputIndex) => {
@@ -219,13 +229,16 @@ const Core = function ({
             </button>
           )
           : (
+            <StyleRoot>
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
+              style={styles.slideInRight}
             >
-              {questionType === 'text' && answer}
+              {questionType === 'text' && <span style={styles.fadeIn}>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
+            </StyleRoot>
           )}
       </Fragment>
     ));
@@ -256,16 +269,16 @@ const Core = function ({
     <div className="card-body">
       <Fade bottom>
       <h2>
-        {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}
-      </h2>
-      <h2>
-        {appLocale.resultPagePoint.replace('<correctPoints>', correctPoints).replace('<totalPoints>', totalPoints)}
+        {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}<br/>
+        {appLocale.resultPagePoint}
       </h2>
       <br />
       <div className='hidden'>
       </div>
       <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>
       {renderQuizResultQuestions()}
+      <NameForm></NameForm>
+      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>      
       </Fade>
     </div>
   );
@@ -289,17 +302,19 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
-          <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
+          <StyleRoot>
+          <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} style={styles.slideInRight}/>
+          </StyleRoot>
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
           {question && renderTags(answerSelectionTypeState, question.correctAnswer.length, question.segment)}
           {question && renderAnswers(question, buttons)}
           {showNextQuestionButton
           && (
-          <div>
-            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg">
-              {appLocale.nextQuestionBtn}
+          <StyleRoot>
+            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg" style={styles.slideInRight}>
+              <span style={styles.fadeIn}>{appLocale.nextQuestionBtn}</span>
             </button>
-          </div>
+          </StyleRoot>
           )}
         </div>
         )}

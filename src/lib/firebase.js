@@ -20,7 +20,13 @@ const firebaseConfig = {
     }, {
       onlyTwice: true
     });
-    
+  }
+
+  export function writeComments(answer) {
+    const db = getDatabase();
+    push(ref(db , 'comments/'), {
+      answer,
+    })
   }
 
   

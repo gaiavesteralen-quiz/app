@@ -1,6 +1,6 @@
 export const quiz =    {
   "quizTitle": "Gaias Quiz",
-  "quizSynopsis": "Quiz v.0.2",
+  "quizSynopsis": "Statistikken fra flere undersøkelser sier at denne quizzen kan forbedre helsa di, få deg til å se yngre ut😍 og hjelpe med nattesøvn, skal DU prøve?❤️(Quiz v.0.2)",
   "questions": [
     {
       "question": "Hvordan vil du kategorisere totalopplevelsen?",

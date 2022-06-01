@@ -1,9 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useTransition } from 'react';
 import Core from './Core';
 import {defaultLocale} from './Locale';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Slide, Zoom } from 'react-reveal';
 import config from 'react-reveal/globals';
+import Radium, {StyleRoot} from 'radium';
+import { zoomIn } from 'react-animations'
+import { Footer } from '../footer';
+
+const styles = {
+  zoomIn : {
+    animation: 'x 0.5s',
+    animationName: Radium.keyframes(zoomIn),
+  }
+
+}
 
 config({ ssrFadeout: true });
 
@@ -14,7 +24,6 @@ const Quiz = function ({
   const [start, setStart] = useState(false);
   const [questions, setQuestions] = useState(quiz.questions);
   const nrOfQuestions = (quiz.nrOfQuestions && quiz.nrOfQuestions < quiz.questions.length) ? quiz.nrOfQuestions : quiz.questions.length;
-
 
   const shuffleQuestions = useCallback((q) => {
     for (let i = nrOfQuestions - 1; i > 0; i -= 1) {
@@ -108,26 +117,35 @@ const Quiz = function ({
   };
 
   return (
+    <>
     <div className="react-quiz-container jumbotron">
       {!start
           && (
-          <Zoom>
-          <div className='react-quiz'>
+            <>
+          <StyleRoot>
+          <div className='react-quiz' style={styles.zoomIn}>
             <div key={0} className='quiz-header'>
               <h1 key={1} >{quiz.quizTitle}</h1>
             </div>
-            <div>{appLocale.landingHeaderText.replace('<questionLength>', nrOfQuestions)}</div>
             {quiz.quizSynopsis
               && (
+              <>
+              <div className='questionCount'>{appLocale.landingHeaderText.replace('<questionLength>', nrOfQuestions)}</div>
               <div className="quiz-synopsis">
                 {quiz.quizSynopsis}
               </div>
+              </>
               )}
             <div className="startQuizWrapper">
-              <button onClick={() => setStart(true)} className="startQuizBtn btn btn-lg">{appLocale.startQuizBtn}</button>
+              <button onClick={() => {
+                setStart(true)
+                
+              }} className="startQuizBtn btn btn-lg">{appLocale.startQuizBtn}</button>
             </div>
           </div>
-          </Zoom>
+          </StyleRoot>
+          <Footer className='btn-lg answerBtn btn' name='none' style={styles.zoomIn}></Footer> 
+          </>
           )}
 
       {start && (
@@ -142,6 +160,7 @@ const Quiz = function ({
         />
       )}
     </div>
+    </>
   );
 };
 export default Quiz;
