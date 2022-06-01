@@ -8,7 +8,7 @@ import {writeUserData} from './firebase.js'
 import { Fade } from 'react-reveal';
 import config from 'react-reveal/globals';
 import Radium, {StyleRoot} from 'radium';
-import { fadeInLeft, slideInRight, slideInDown, fadeIn } from 'react-animations'
+import {  slideInRight, slideInDown, fadeIn, fadeInRight } from 'react-animations'
 import { Footer } from '../footer';
 import { NameForm } from '../test';
 
@@ -24,6 +24,10 @@ const styles = {
   fadeIn : {
     animation : '0.5s',
     animationName: Radium.keyframes(fadeIn)
+  },
+  fadeInRight: {
+    animation : 'x 0.5s',
+    animationName: Radium.keyframes(fadeInRight)
   }
 }
 
@@ -233,9 +237,9 @@ const Core = function ({
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
-              style={styles.slideInRight}
+              style={styles.fadeInRight}
             >
-              {questionType === 'text' && <span style={styles.fadeIn}>{answer}</span>}
+              {questionType === 'text' && <span style={styles.fadeInRight}>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
             </StyleRoot>
@@ -310,7 +314,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <StyleRoot>
-            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg" style={styles.slideInRight}>
+            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg" style={styles.fadeInRight}>
               <span style={styles.fadeIn}>{appLocale.nextQuestionBtn}</span>
             </button>
           </StyleRoot>
