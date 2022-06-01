@@ -22,7 +22,7 @@ const styles = {
     animationName : Radium.keyframes(slideInDown)
   },
   fadeIn : {
-    animation : '0.5s',
+    animation : '0.3s',
     animationName: Radium.keyframes(fadeIn)
   },
   fadeInRight: {
