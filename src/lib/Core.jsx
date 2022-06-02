@@ -8,7 +8,7 @@ import {writeUserData} from './firebase.js'
 import { Fade } from 'react-reveal';
 import config from 'react-reveal/globals';
 import Radium, {StyleRoot} from 'radium';
-import {  slideInRight, slideInDown, fadeIn, fadeInRight } from 'react-animations'
+import {  slideInRight, slideInDown, fadeIn, fadeInRight, zoomInUp } from 'react-animations'
 import { Footer } from '../footer';
 import { NameForm } from '../test';
 
@@ -28,6 +28,10 @@ const styles = {
   fadeInRight: {
     animation : 'x 0.5s',
     animationName: Radium.keyframes(fadeInRight)
+  }, 
+  zoomInUp: {
+    animation : 'x 0.5s',
+    animationName: Radium.keyframes(zoomInUp)
   }
 }
 
@@ -89,6 +93,9 @@ const Core = function ({
       setCorrectPoints(correctPointsTemp);
       writeUserData(userInput)
       console.log(userInput)
+      setTimeout(() => {
+        document.location.reload(false);
+      }, 40000);
     }
   }, [endQuiz]);
 
@@ -270,20 +277,21 @@ const Core = function ({
   };
 
   const renderResult = () => (
+    <>
     <div className="card-body">
       <Fade bottom>
-      <h2>
+      <h2 class="h2test">
         {appLocale.resultPageHeaderText.replace('<correctIndexLength>', correct.length).replace('<questionLength>', questions.length)}<br/>
         {appLocale.resultPagePoint}
       </h2>
       <br />
-      <div className='hidden'>
-      </div>
-      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg">Gjenta Quiz</button>
-      {renderQuizResultQuestions()}
-      <NameForm></NameForm>    
+      <div className='hidden'></div>
+      <NameForm></NameForm> 
+      {renderQuizResultQuestions()}   
+      <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg home-btn">Hjem</button>
       </Fade>
     </div>
+    </>
   );
 
   return (

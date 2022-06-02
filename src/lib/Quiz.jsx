@@ -144,7 +144,7 @@ const Quiz = function ({
             </div>
           </div>
           </StyleRoot>
-          <Footer className='btn-lg answerBtn btn' name='none' style={styles.zoomIn}></Footer> 
+          <Footer className='btn-lg answerBtn btn footers' name='none' style={styles.zoomIn}></Footer> 
           </>
           )}
 
