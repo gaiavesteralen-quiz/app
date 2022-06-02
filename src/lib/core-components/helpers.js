@@ -30,6 +30,7 @@ export const checkAnswer = (index, correctAnswer, answerSelectionType, {
     2: { disabled: true },
     3: { disabled: true },
     4: { disabled: true },
+    5: { disabled: true },
   };
   if (answerSelectionType === 'single') {
     if (userInput[currentQuestionIndex] === undefined) {

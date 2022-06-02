@@ -63,7 +63,7 @@ code {
 
 .react-quiz {
   justify-self: center;
-  border: 1px solid black;
+  border: 1px solid #ddd;
   background-color: white;
   color: black;
   border-radius: 5px;
@@ -78,7 +78,7 @@ code {
 }
 
 .react-quiz .quiz-header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ddd;
   width: 100%;
   height: 99%;
   display: flex;
@@ -131,7 +131,7 @@ code {
   white-space: normal;
   text-align: unset;
   min-width: 282px;
-  
+  border: 1px solid #ddd;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -194,7 +194,7 @@ code {
   line-height: 1.35135;
   border-radius: 5px;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid #ddd;
   width: 90%;
   margin-bottom: 15px;
 }
@@ -212,7 +212,7 @@ code {
 }
 
 .react-quiz-container .result-answer-wrapper {
-  border: 1px solid black;
+  border: 1px solid #ddd;
   border-radius: 5px;
   width: 315px;
   margin: 30px auto 20px;
@@ -222,7 +222,7 @@ code {
 .react-quiz-container .result-answer-wrapper p {
     background-color: #D3FFE4;
     color: black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ddd;
     padding: 10px 2px 12px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -250,7 +250,7 @@ code {
    -moz-border-radius: 5px;
    border-radius: 5px;
    background-color: #44FA9D;
-   border: 1px solid black;
+   border: 1px solid #ddd;
    margin: 0px auto 30px;
 }
 
@@ -277,7 +277,7 @@ code {
 }
 
 #comments {
-  border: 1px solid black;
+  border: 1px solid #ddd;
   height: 4em;
   margin-top: 10px;
   width: 300px;

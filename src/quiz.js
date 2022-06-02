@@ -6,8 +6,9 @@ export const quiz =    {
       "question": "Hvordan vil du kategorisere totalopplevelsen?",
       "questionType": "text",
       "answers": [
-        "Veldig bra!",
-        "Middels bra",
+        "Veldig bra",
+        "Bra",
+        "Middels",
         "Dårlig",
         "Veldig dårlig"
       ],
@@ -39,7 +40,8 @@ export const quiz =    {
         "Flere spill",
         "Mer historie",
         "En guide",
-        "Mer informasjonsmateriell"
+        "Mer informasjonsmateriell",
+        "Ingenting"
       ],
       "correctAnswer": "0",
       "questionType": "text"
@@ -59,7 +61,8 @@ export const quiz =    {
         "Vesterålen",
         "Øksnes",
         "Miljø og klima",
-        "Gjenbruk og resirkulering"
+        "Gjenbruk og resirkulering",
+        "Ingenting"
       ],
       "correctAnswer": "0",
       "questionType": "text"
