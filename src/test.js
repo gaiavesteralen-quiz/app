@@ -8,6 +8,7 @@ export class NameForm extends React.Component {
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleClick = this.handleClick.bind(this);
 
       this.state.placeHolder = 'Har du noen flere tilbakemeldinger?'
       this.state.onOff = false;
@@ -25,12 +26,16 @@ export class NameForm extends React.Component {
       this.state.onOff = true;
       event.preventDefault();
     }
+
+    handleClick(event) {
+      this.setState({placeHolder: event.target.placeHolder = '...'})
+    }
   
     render() {
       return (
         <form className="form" onSubmit={this.handleSubmit}>
           <label>
-            <input disabled={this.state.onOff} required id="comments" useref="someName" type={this.state.active} placeholder={this.state.placeHolder} value={this.state.value} onChange={this.handleChange} />
+            <input onClick={this.handleClick} disabled={this.state.onOff} required id="comments" useref="someName" type={this.state.active} placeholder={this.state.placeHolder} value={this.state.value} onChange={this.handleChange} />
           </label>
           <input disabled={this.state.onOff} className='btn' type="submit" value="Submit" />
         </form>

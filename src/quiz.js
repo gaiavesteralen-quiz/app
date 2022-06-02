@@ -54,41 +54,12 @@ export const quiz =    {
       "questionType": "text"
     },
     {
-      "question": "...",
+      "question": "Har du lært noe nytt om?",
       "answers": [
-        "kommer snart"
-      ],
-      "correctAnswer": "0",
-      "questionType": "text"
-    },
-    {
-      "question": "...",
-      "answers": [
-        "kommer snart"
-      ],
-      "correctAnswer": "0",
-      "questionType": "text"
-    },
-    {
-      "question": "...",
-      "answers": [
-        "kommer snart"
-      ],
-      "correctAnswer": "0",
-      "questionType": "text"
-    },
-    {
-      "question": "...",
-      "answers": [
-        "kommer snart"
-      ],
-      "correctAnswer": "0",
-      "questionType": "text"
-    },
-    {
-      "question": "...",
-      "answers": [
-        "kommer snart"
+        "Vesterålen",
+        "Øksnes",
+        "Miljø og klima",
+        "Gjenbruk og resirkulering"
       ],
       "correctAnswer": "0",
       "questionType": "text"

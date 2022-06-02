@@ -270,6 +270,7 @@ const Core = function ({
   };
 
   const renderResult = () => (
+    <>
     <div className="card-body">
       <Fade bottom>
       <h2>
@@ -284,6 +285,7 @@ const Core = function ({
       <NameForm></NameForm>    
       </Fade>
     </div>
+    </>
   );
 
   return (
