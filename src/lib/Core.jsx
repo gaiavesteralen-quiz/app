@@ -8,7 +8,7 @@ import {writeUserData} from './firebase.js'
 import { Fade } from 'react-reveal';
 import config from 'react-reveal/globals';
 import Radium, {StyleRoot} from 'radium';
-import {  slideInRight, slideInDown, fadeIn, fadeInRight, zoomInUp } from 'react-animations'
+import {  slideInRight, slideInDown, fadeIn, fadeInRight, zoomIn } from 'react-animations'
 import { Footer } from '../footer';
 import { NameForm } from '../test';
 
@@ -29,9 +29,9 @@ const styles = {
     animation : 'x 0.5s',
     animationName: Radium.keyframes(fadeInRight)
   }, 
-  zoomInUp: {
+  zoomIn: {
     animation : 'x 0.5s',
-    animationName: Radium.keyframes(zoomInUp)
+    animationName: Radium.keyframes(zoomIn)
   }
 }
 
@@ -287,8 +287,10 @@ const Core = function ({
       <br />
       <div className='hidden'></div>
       <NameForm></NameForm> 
-      {renderQuizResultQuestions()}   
+      {renderQuizResultQuestions()}  
+      <div>
       <button onClick={() => window.location.reload(false)} className="answerBtn btn btn-lg home-btn">Hjem</button>
+      </div> 
       </Fade>
     </div>
     </>
