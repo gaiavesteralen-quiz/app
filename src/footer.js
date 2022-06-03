@@ -14,7 +14,7 @@ export class Footer extends React.Component {
     render() {
         const btn = 
         <StyleRoot className="container">
-            <div className="footers" style={styles.zoomIn}>av Gaia Talent</div>
+            <div className="footers" style={styles.zoomIn}><p className="color">av Gaia Talent</p></div>
         </StyleRoot>
 
         return btn

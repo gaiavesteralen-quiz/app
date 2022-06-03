@@ -327,7 +327,7 @@ const Core = function ({
           {showNextQuestionButton
           && (
           <StyleRoot>
-            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn btn-lg" style={styles.fadeInRight}>
+            <button key={0} onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn answerBtn btn btn-lg" style={styles.fadeInRight}>
               <span style={styles.fadeIn}>{appLocale.nextQuestionBtn}</span>
             </button>
           </StyleRoot>

@@ -136,6 +136,11 @@ code {
   cursor: pointer;
   margin: 0 auto;
   transition: ease-out 0.15s;
+  color: #D3FFE4;
+}
+
+.react-quiz-container .answerBtn:hover {
+  color: #D3FFE4;
 }
 
 .react-quiz-container .questionWrapper .btn {
@@ -147,7 +152,6 @@ code {
   text-align: unset;
   min-width: 282px;
   border: 1px solid #D3FFE4;
-  color: #D3FFE4;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -178,6 +182,11 @@ code {
 
 .react-quiz-container .incorrect {
   background-color: #D3FFE4;
+  color: black;
+}
+
+.react-quiz-container .incorrect:hover {
+  color: black;
 }
 
 .react-quiz-container .questionWrapper img {
@@ -202,10 +211,6 @@ code {
   min-width: 100%;
 }
 
-.react-quiz-container .answerBtn:hover {
-  color: none;
-}
-
 .react-quiz-container .startQuizWrapper .startQuizBtn {
   font-size: 18px;
   border-radius: 2px;
@@ -215,6 +220,7 @@ code {
   border: 1px solid #ddd;
   width: 90%;
   margin-bottom: 15px;
+  color: black;
 }
 
 .nextQuestionBtn {
@@ -223,6 +229,10 @@ code {
   position: absolute;
   margin: 0 auto;
   transition: margin 0.3s;
+}
+
+.nextQuestionBtn:hover {
+  color: none;
 }
 
 .btn.correct:hover {
@@ -281,6 +291,8 @@ code {
 .react-quiz-container .quiz-synopsis {
   margin: 15px 10px;
   color: #D3FFE4;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .react-quiz-container .quiz-result-filter {
@@ -346,12 +358,17 @@ code {
   margin-bottom: 20px;
   justify-content: center;
   z-index: -1;
+  color: #D3FFE4;
 }
 
 .footers {
   width: 100%;
   align-self: flex-end;
   grid-row: 1;
+}
+
+.color {
+  color: #D3FFE4;
 }
 
 .home-btn {
