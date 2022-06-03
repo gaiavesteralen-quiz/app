@@ -5,6 +5,8 @@ export class Navbars extends React.Component {
     constructor(props) {
         super(props);
         this.handleCLicks = this.handleCLicks.bind(this);
+        
+        this.btnClasses = 'link'
       }
         handleCLicks(event) {
         document.location.reload()
@@ -12,8 +14,10 @@ export class Navbars extends React.Component {
     
     render() {
         const nav = 
-    <button onClick={this.handleCLicks} class="link" href="#">
-        <h4>🏠</h4>
+    <button onClick={this.handleCLicks} className={this.btnClasses} href="#">
+        <h3>🏠<br/>
+        <span class="underline_small"><span>&#8592;</span> Hjem</span>
+        </h3>
     </button>
         return nav
     }

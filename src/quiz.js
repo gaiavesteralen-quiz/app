@@ -1,6 +1,6 @@
 export const quiz =    {
-  "quizTitle": "Gaias Quiz",
-  "quizSynopsis": "Statistikken fra flere undersøkelser sier at denne quizzen kan forbedre helsa di, få deg til å se yngre ut😍 og hjelpe med nattesøvn, skal DU prøve?❤️(Quiz v.0.3)",
+  "quizTitle": "Gaias Quiz❤️",
+  "quizSynopsis": "Ta denne kjappe quizen for å gi oss tilbakemeldinger på utstillinga vår, laget av GaiaTalent!",
   "questions": [
     {
       "question": "Hvordan vil du kategorisere totalopplevelsen?",
@@ -28,7 +28,7 @@ export const quiz =    {
     {
       "question": "Viste du hvor du skulle gå?",
       "answers": [
-        "Fin flyt, logisk oppsett",
+        "Fin flyt, logiskt oppsett",
         "Jeg skjønte det delvis",
         "Jeg var usikker på hvor den startet",
         "Jeg savnet en kommentar boks"
@@ -59,7 +59,7 @@ export const quiz =    {
       "questionType": "text"
     },
     {
-      "question": "Har du lært noe nytt om?",
+      "question": "Har du lært noe om:",
       "answers": [
         "Vesterålen",
         "Øksnes",
