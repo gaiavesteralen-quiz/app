@@ -11,6 +11,7 @@ import Radium, {StyleRoot} from 'radium';
 import {  slideInRight, slideInDown, fadeIn, fadeInRight, zoomIn } from 'react-animations'
 import { Footer } from '../footer';
 import { NameForm } from '../test';
+import { Navbars } from '../nav';
 
 const styles = {
   slideInRight : {
@@ -162,7 +163,6 @@ const Core = function ({
             {questionType === 'text' && <span>{answer}</span>}
             {questionType === 'photo' && <img src={answer} alt="image" />}
           </button>
-          
         </div>
       );
     });
@@ -241,14 +241,16 @@ const Core = function ({
           )
           : (
             <StyleRoot>
+            <div style={styles.fadeInRight}>
             <button
               onClick={() => onClickAnswer(index)}
               className="answerBtn btn btn-lg"
-              style={styles.fadeInRight}
+              //style={styles.fadeInRight}
             >
-              {questionType === 'text' && <span style={styles.fadeIn}>{answer}</span>}
+              {questionType === 'text' && <span>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
             </button>
+            </div>
             </StyleRoot>
           )}
       </Fragment>
@@ -315,6 +317,7 @@ const Core = function ({
             {currentQuestionIndex + 1}
             :
           </div>
+          <Navbars></Navbars>
           <StyleRoot>
           <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} style={styles.slideInRight}/>
           </StyleRoot>

@@ -6,13 +6,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
   display: flex;
   justify-content: center;
+  background-color: #000F37;
 }
 
 html {
   height: 100%;
+  background-color: #000F37;
+  color: #D3FFE4;
 }
 
 #root {
@@ -24,6 +26,8 @@ html {
   grid-template-columns: none;
   grid-template-rows: repeat(5, 1fr);
   padding: 10px;
+  background-color: #000f37;
+  color: #D3FFE4
 }
 
 Zoom {
@@ -68,17 +72,18 @@ code {
 .react-quiz {
   justify-self: center;
   border: 1px solid #ddd;
-  background-color: white;
-  color: black;
   border-radius: 5px;
   width: 315px;
-  height: 400px;
+  height: 600px;
   display: grid;
   align-items: center;
+  color: black;
+  
 }
 
 .react-quiz .questionCount {
   align-self: end;
+  color: #D3FFE4;
 }
 
 .react-quiz .quiz-header {
@@ -101,6 +106,7 @@ code {
 .react-quiz-container .startQuizWrapper {
   margin-top: 15px;
   align-self: flex-end;
+  padding-bottom: 10px;
 }
 
 .questionWrapperBody {
@@ -135,18 +141,18 @@ code {
 .react-quiz-container .questionWrapper .btn {
   margin-bottom: 10px;
   border-radius: 4px;
-  border: 1px solid #000F37;
   font-size: 18px;
   display: block;
   white-space: normal;
   text-align: unset;
   min-width: 282px;
-  border: 1px solid #ddd;
+  border: 1px solid #D3FFE4;
+  color: #D3FFE4;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
   background-color: #D3FFE4;
-  color: #000F37;
+  color: black;
 }
 
 #root .react-quiz-container .questionWrapper .card-body{
@@ -205,7 +211,7 @@ code {
   border-radius: 2px;
   line-height: 1.35135;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #D3FFE4;
   border: 1px solid #ddd;
   width: 90%;
   margin-bottom: 15px;
@@ -244,6 +250,23 @@ code {
     border-top-right-radius: 5px;
 }
 
+.link {
+  position: absolute;
+  bottom: -65px;
+  left: -80px;
+  padding: 45px 65px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #D3FFE4;
+  cursor: pointer;
+  display: flex;
+}
+
+.link h4 {
+  margin-left: 45px;
+  margin-bottom: 35px;
+}
+
 .react-quiz-container .result-answer-wrapper .explanation {
   padding: 20px;
   margin: 0px 20px 50px 10px;
@@ -257,6 +280,7 @@ code {
 
 .react-quiz-container .quiz-synopsis {
   margin: 15px 10px;
+  color: #D3FFE4;
 }
 
 .react-quiz-container .quiz-result-filter {
@@ -299,6 +323,8 @@ code {
   width: 300px;
   border-radius: 5px;
   margin-bottom: 10px;
+  background-color: #D3FFE4;
+  color: black;
 }
 
 .form {
