@@ -1,5 +1,15 @@
 import React from "react";
 import { writeComments } from "./lib/firebase";
+import {  slideInRight, slideInDown, fadeIn, fadeInRight, zoomIn } from 'react-animations'
+import Radium, {StyleRoot} from 'radium';
+
+const styles = {
+  fadeInRight2: {
+    animation : 'x 0.7s',
+    animationName: Radium.keyframes(fadeInRight)
+  },
+}
+
 
 export class NameForm extends React.Component {
     constructor(props) {
@@ -19,7 +29,6 @@ export class NameForm extends React.Component {
     }
   
     handleSubmit(event) {
-      console.log('A name was submitted: ' + this.state.value);
       writeComments(this.state.value)
       this.state.placeHolder = 'Tusen hjertelig❤️'
       this.setState({value: event.target.value = ''})
@@ -33,11 +42,11 @@ export class NameForm extends React.Component {
   
     render() {
       return (
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.handleSubmit} style={styles.fadeInRight2}>
           <label>
             <input onClick={this.handleClick} disabled={this.state.onOff} required id="comments" useref="someName" type={this.state.active} placeholder={this.state.placeHolder} value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input disabled={this.state.onOff} className='btn' type="submit" value="Submit" />
+          <input disabled={this.state.onOff} className='btn answerBtn' type="submit" value="Send" />
         </form>
       );
     }

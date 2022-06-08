@@ -226,7 +226,7 @@ code {
 .nextQuestionBtn {
   background-color: #000F37;
   color: #D3FFE4;
-  position: absolute;
+  position: relative;
   margin: 0 auto;
   transition: margin 0.3s;
 }
@@ -345,15 +345,18 @@ code {
   border: 1px solid #ddd;
   height: 4em;
   margin-top: 10px;
-  width: 300px;
+  max-width: 500px;
   border-radius: 5px;
-  margin-bottom: 10px;
   background-color: #D3FFE4;
   color: black;
 }
 
 .form {
-  width: 300px;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
   margin: 0 auto;
 }
 

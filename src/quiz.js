@@ -17,14 +17,16 @@ export const quiz =    {
     {
       "question": "Hva likte du best i utstillinga?",
       "answers": [
-        "Teknologien",
-        "Opplevelsen",
-        "Designet",
-        "Konseptet",
-        "Ingenting"
+        "Introduskjonen ved inngangen",
+        "Informasjon om tema ",
+        "Om selve prosjektet og Gaia talent ved inngangen",
+        "Informasjon om partnere",
+        "Selve modellen",
+        "Annet, kommenter gjerne",
       ],
+      "addComments" : "yes",
       "correctAnswer": "0",
-      "questionType": "text"
+      "questionType": "text",
     },
     {
       "question": "Viste du hvor du skulle gå?",
@@ -32,7 +34,7 @@ export const quiz =    {
         "Fin flyt, logiskt oppsett",
         "Jeg skjønte det delvis",
         "Jeg var usikker på hvor den startet",
-        "Jeg savnet en kommentar boks"
+        "Jeg savnet en kommentar boks",
       ],
       "correctAnswer": "0",
       "questionType": "text"
