@@ -17,10 +17,11 @@ export const quiz =    {
     {
       "question": "Hva likte du best i utstillinga?",
       "answers": [
-        "kommer snart1",
-        "kommer snart2",
-        "kommer snart3",
-        "kommer snart4"
+        "Teknologien",
+        "Opplevelsen",
+        "Designet",
+        "Konseptet",
+        "Ingenting"
       ],
       "correctAnswer": "0",
       "questionType": "text"

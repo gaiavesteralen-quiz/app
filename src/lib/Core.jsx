@@ -47,7 +47,7 @@ const Core = function ({
   const [endQuiz, setEndQuiz] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [buttons, setButtons] = useState({});
-  const [correct, setCorrect] = useState([]);
+  const [correct, setSelected] = useState([]);
   const [incorrect, setIncorrect] = useState([]);
   const [userInput, setUserInput] = useState([]);
   const [filteredValue, setFilteredValue] = useState('all');
@@ -96,7 +96,7 @@ const Core = function ({
       console.log(userInput)
       setTimeout(() => {
         document.location.reload(false);
-      }, 40000);
+      }, 400000);
     }
   }, [endQuiz]);
 
@@ -216,7 +216,7 @@ const Core = function ({
       setButtons,
       setCorrectAnswer,
       setIncorrectAnswer,
-      setCorrect,
+      setSelected,
       setIncorrect,
       setShowNextQuestionButton,
       setUserInput,
